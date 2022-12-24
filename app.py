@@ -34,6 +34,11 @@ def static_js(*, filename):
     return send_from_directory('website/js', filename)
 
 
+@app.route('/images/<string:filename>')
+def static_images(*, filename):
+    return send_from_directory('website/images', filename)
+
+
 if __name__ == '__main__':
     load_dotenv()
     app.run()
