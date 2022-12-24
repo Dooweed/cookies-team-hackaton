@@ -1,23 +1,126 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
 
-    <link rel="stylesheet" href="css/style.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 
-<form id="form">
-    <h4>Enter youtube link</h4>
-    <input type="text" name="link">
-    <button type="submit">Submit</button>
-</form>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0" style="position:relative;">
 
-<div id="player"></div>
+  <div class="bubble-common bubble-1"></div>
+  <div class="bubble-common bubble-2"></div>
+  <div class="bubble-common bubble-3"></div>
+  <div class="bubble-common bubble-4"></div>
+  <div class="bubble-common bubble-5"></div>
+  <div class="bubble-common bubble-6"></div>
+
+  <nav id="navbar" class="navbar navbar-expand-lg sticky-top px-3">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="Dubby" class="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#scrollspyHeading1">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading2">Upload</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading3">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="scrollspyHeading1" class="main container">
+    <div class="row">
+      <div class="col-12 col-lg-6 left d-flex flex-column">
+        <div class="informational-block">
+          <h1 class="heading">Let's Explore Three-Dimensional Visual</h1>
+          <p class="description">With virtual technology you can see the digital world feel more real and you can play the game with a new style.</p>
+
+          <div class="buttons row">
+            <div class="try-it__gradient"></div>
+            <button class="try-it">Try it</button>
+            <button class="learn-more">Learn more</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-none d-lg-block col-lg-6 right">
+        <img src="images/character.png" alt="">
+        <div class="text">
+          <h3 class="heading">Cinematic Virtual Reality</h3>
+          <div class="horizontal-dash"></div>
+          <p class="description">Let’s be the best for more real and effective results and ready to explore the limitless world that we have prepared for you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="scrollspyHeading2" class="about-us container">
+    <div class="row">
+      <div class="left d-none d-lg-block col-7">
+        <div class="row">
+          <div class="about-us-1 col-6">
+            <img src="images/about-1.png" alt="">
+          </div>
+          <div class="about-us-2 col-6">
+            <img src="images/about-2.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="right col-12 col-lg-5">
+        <div class="informational-block d-flex flex-column justify-content-between h-100">
+          <h3 class="heading">New Experience In Playing Game</h3>
+          <p class="description">You can try playing the game with a new style and of course a more real feel, like you are the main character in your game and adventure in this
+            new
+            digital world.</p>
+
+          <div class="buttons row">
+            <div class="try-it__gradient"></div>
+            <button class="try-it">Try it</button>
+            <button class="learn-more">Learn more</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="scrollspyHeading3" class="watch-video">
+    <form class="form d-flex flex-column align-items-center" id="form">
+      <img src="images/upload.png" alt="upload">
+      <p class="description">Upload your video <span class="highlighted">URL</span></p>
+      <div class="form-group row">
+        <input type="text" name="link" placeholder="Your URL...">
+        <div class="button__gradient"></div>
+        <button type="submit">Upload</button>
+      </div>
+    </form>
+
+    <h2 class="heading">Watch your video</h2>
+    <div class="player" id="player"></div>
+  </div>
+
+<script src="js/bootstrap.min.js"></script>
+
+<!--<script src="js/page.js"></script>-->
 
 <script src="js/youtube.js"></script>
 <script src="js/transcript.js"></script>
