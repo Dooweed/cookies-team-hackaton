@@ -1,0 +1,1 @@
+Install `pip install azure-cognitiveservices-speech`
