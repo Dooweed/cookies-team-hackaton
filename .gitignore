@@ -4,3 +4,4 @@ venv
 temp.html
 temp.json
 temp.wav
+__pycache__
