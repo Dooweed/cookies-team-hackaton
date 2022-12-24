@@ -1,11 +1,14 @@
 from dotenv import load_dotenv
 from flask import Flask, send_from_directory
 from flask import request
+from flask_cors import CORS
 
 from translation.utils import translate
 from youtube.main import get_captions
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 
 @app.route('/')
