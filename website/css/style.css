@@ -145,7 +145,7 @@ body div.main div.right img {
 }
 body div.main div.right div.text {
   position: relative;
-  top: -280px;
+  top: -240px;
   left: -8px;
   text-align: center;
   color: #FFF;
@@ -199,16 +199,9 @@ body div.about-us div.right div.buttons {
   margin-top: 92px;
 }
 body div.watch-video {
-  padding-bottom: 100px;
+  padding-bottom: 60px;
   width: 1000px;
-  margin: 100px auto 0 auto;
-}
-body div.watch-video .form {
-  width: 980px;
-  height: 354.84px;
-  background-image: url("../images/form-background.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+  margin: 80px auto 0 auto;
 }
 body div.watch-video .form img {
   margin-top: 57px;
@@ -265,7 +258,7 @@ body div.watch-video .form .form-group button {
   color: #FFFFFF;
 }
 body div.watch-video .heading {
-  margin-top: 163px;
+  margin-top: 100px;
   font-family: "Orbitron", sans-serif;
   font-style: normal;
   font-weight: 900;

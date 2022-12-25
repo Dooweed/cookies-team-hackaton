@@ -14,7 +14,7 @@
 
     <script>
         function scrollToEl(id) {
-            document.getElementById(id).scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+            document.getElementById(id).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
         }
     </script>
 </head>
@@ -41,13 +41,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#scrollspyHeading1">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#scrollspyHeading1">Bosh sahifa</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#scrollspyHeading2">Upload</a>
+                    <a class="nav-link" href="#scrollspyHeading2">Biz haqida</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#scrollspyHeading3">About</a>
+                    <a class="nav-link" href="#scrollspyHeading3">Tomosha qilish</a>
                 </li>
             </ul>
         </div>
@@ -58,27 +58,25 @@
     <div class="row">
         <div class="col-12 col-lg-6 left d-flex flex-column">
             <div class="informational-block">
-                <h1 class="heading">Let's Explore Three-Dimensional Visual</h1>
-                <p class="description">With virtual technology you can see the digital world feel more real and you can
-                    play the game with a new style.</p>
+                <h1 class="heading">Sizning sevimli kontentingiz endi o’zbek tilida</h1>
+                <p class="description">Haqiqiy vaqtda YouTube'dan videolarni dublyaj qilish xizmati. Bu yerda va hozir o‘z tilingizda millionlab videolarni tomosha qiling.</p>
 
                 <div class="buttons row">
                     <div class="try-it__gradient"></div>
-                    <button class="try-it" onclick="scrollToEl('form')">
-                        Try it
+                    <button class="try-it underline-hover" id="main-try-it" onclick="scrollToEl('scrollspyHeading3')">
+                        Ishlatib ko'ring
                     </button>
-                    <button class="learn-more">Learn more</button>
+                    <button class="learn-more">Batafsil</button>
                 </div>
             </div>
         </div>
 
         <div class="d-none d-lg-block col-lg-6 right">
-            <img src="images/character.png" alt="">
+            <img id="character" src="images/character.png" alt="">
             <div class="text">
-                <h3 class="heading">Cinematic Virtual Reality</h3>
+                <h3 class="heading">Onlayn dublyaj</h3>
                 <div class="horizontal-dash"></div>
-                <p class="description">Let’s be the best for more real and effective results and ready to explore the
-                    limitless world that we have prepared for you.</p>
+                <p class="description">Sevimli YouTube videolaringizni oʻzbek tilida koʻrish imkoniyatiga ega boʻling</p>
             </div>
         </div>
     </div>
@@ -99,16 +97,16 @@
 
         <div class="right col-12 col-lg-5">
             <div class="informational-block d-flex flex-column justify-content-between h-100">
-                <h3 class="heading">New Experience In Playing Game</h3>
-                <p class="description">You can try playing the game with a new style and of course a more real feel,
+                <h3 class="heading">Qiziqarli va ma'rifiy kontentni o'zbek tilida tomosha qiling</h3>
+                <!--<p class="description">You can try playing the game with a new style and of course a more real feel,
                     like you are the main character in your game and adventure in this
                     new
-                    digital world.</p>
+                    digital world.</p>-->
 
                 <div class="buttons row">
                     <div class="try-it__gradient"></div>
-                    <button class="try-it" onclick="scrollTo('form')">Try it</button>
-                    <button class="learn-more">Learn more</button>
+                    <button class="try-it" onclick="scrollToEl('scrollspyHeading3')">Ishlatib ko'ring</button>
+                    <button class="learn-more">Batafsil</button>
                 </div>
             </div>
         </div>
@@ -117,22 +115,20 @@
 
 <div id="scrollspyHeading3" class="watch-video">
     <form class="form d-flex flex-column align-items-center" id="form">
-        <img src="images/upload.png" alt="upload">
-        <p class="description">Upload your video <span class="highlighted">URL</span></p>
         <div class="form-group row">
-            <input type="text" name="link" id="link" placeholder="Your URL...">
+            <input type="text" name="link" id="link" placeholder="URLni kiriting">
             <div class="button__gradient"></div>
-            <button type="submit">Upload</button>
+            <button type="submit">Tarjima qilish</button>
         </div>
     </form>
 
-    <h2 class="heading">Watch your video</h2>
+    <h2 class="heading">Videoni tomosha qiling</h2>
     <div class="player" id="player"></div>
 </div>
 
 <script src="js/bootstrap.min.js"></script>
 
-<!--<script src="js/page.js"></script>-->
+<script src="js/page.js"></script>
 
 <script src="js/youtube.js"></script>
 <script src="js/transcript.js"></script>
