@@ -31,7 +31,6 @@ def translate(captions: list, from_language: str, to_languages: list[str] = None
     # text = response[0]['translations'][0]['text']
 
     # print(json.dumps(response, sort_keys=True, ensure_ascii=False, indent=4, separators=(',', ': ')))
-    print('translated', captions)
     return captions
 
 

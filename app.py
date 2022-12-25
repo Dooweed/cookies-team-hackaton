@@ -7,6 +7,7 @@ from flask_cors import CORS
 
 from text_to_speech.utils import convert_to_audio
 from translation.utils import translate
+from utils import db_cache
 from youtube.main import get_captions
 
 app = Flask(__name__)
@@ -20,6 +21,7 @@ def index():  # put application's code here
 
 
 @app.route('/api/transcript')
+@db_cache
 def transcript():
     url = request.args.get('link', None)
     if not url:
@@ -29,7 +31,7 @@ def transcript():
 
     start = default_timer()
     for caption in captions:
-        caption['audio'] = convert_to_audio(caption['text'])
+        caption['audio'], caption['audio_duration'] = convert_to_audio(caption['text'])
     print(f'Overall for audio translation: {default_timer() - start}s')
 
     return captions

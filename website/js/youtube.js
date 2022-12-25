@@ -9,6 +9,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
     event.target.playVideo();
+    player.setVolume(20);
 }
 
 // 5. The API calls this function when the player's state changes.
@@ -18,6 +19,7 @@ let done = false;
 
 function loadYoutubePlayer(videoId) {
     player = new YT.Player('player', {
+        host: 'https://www.youtube.com',
         height: '360',
         width: '640',
         videoId: videoId,

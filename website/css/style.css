@@ -68,6 +68,7 @@ body {
   box-shadow: 23.6066px 52.2717px 64.0749px rgba(24, 23, 55, 0.58);
 }
 body .bubble-common {
+  display: none;
   z-index: -1;
   position: absolute;
   background: radial-gradient(37.26% 37.26% at 50% 50%, rgba(170, 20, 240, 0.31) 0%, rgba(170, 20, 240, 0) 100%);
@@ -95,19 +96,23 @@ body .bubble-4 {
   width: 966.09px;
   height: 931.59px;
   left: -16.79px;
-  top: calc(-458.86px + 1724px);
+  top: 1265.14px;
 }
 body .bubble-5 {
   width: 1126.33px;
   height: 1086.1px;
   left: 854.3px;
-  top: calc(414.09px + 1724px);
+  top: 2138.09px;
 }
 body .bubble-6 {
   width: 675.53px;
   height: 651.4px;
   left: -304.4px;
-  top: calc(151px + 1724px);
+  top: 1875px;
+}
+body nav.navbar {
+  background-color: #FFF;
+  border-radius: 0 0 40px 40px;
 }
 body nav.navbar .nav-item {
   padding: 6px 36px;
@@ -128,7 +133,7 @@ body nav.navbar .nav-item .nav-link.active {
 }
 body nav.navbar img.logo {
   width: 100%;
-  max-height: 80px;
+  max-height: 60px;
 }
 body div.main div.left {
   padding-right: 112px;
@@ -196,7 +201,7 @@ body div.about-us div.right div.buttons {
 body div.watch-video {
   padding-bottom: 100px;
   width: 1000px;
-  margin: 100px auto;
+  margin: 100px auto 0 auto;
 }
 body div.watch-video .form {
   width: 980px;
