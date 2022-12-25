@@ -27,8 +27,9 @@ def get_captions(url: str):
     captions_xml = requests.get(url).text
     captions_data = xmltodict.parse(captions_xml, disable_entities=False)['transcript']['text']
     for cap in captions_data:
-        cap['#text'] = html.unescape(cap['#text'])
-        cap['@dur'] = float(cap['@dur'])
-        cap['@start'] = float(cap['@start'])
+        text, dur, start = cap.pop('#text'), cap.pop('@dur'), cap.pop('@start')
+        cap['text'] = html.unescape(text)
+        cap['dur'] = float(dur)
+        cap['start'] = float(start)
 
     return captions_data, language_code

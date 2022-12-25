@@ -18,7 +18,7 @@ def translate(captions: list, from_language: str, to_languages: list[str] = None
 
     body = []
     for cap in captions:
-        body.append({'text': cap['#text']})
+        body.append({'text': cap['text']})
 
     start = default_timer()
     response = requests.post(constructed_url, params=params, headers=headers, json=body)
@@ -26,7 +26,7 @@ def translate(captions: list, from_language: str, to_languages: list[str] = None
     print(default_timer() - start)
 
     for i, cap in enumerate(captions):
-        cap['#text'] = response[i]['translations'][0]['text']
+        cap['text'] = response[i]['translations'][0]['text']
 
     # text = response[0]['translations'][0]['text']
 
