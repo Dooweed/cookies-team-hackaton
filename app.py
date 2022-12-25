@@ -42,6 +42,11 @@ def static_css(*, filename):
     return send_from_directory('website/css', filename)
 
 
+@app.route('/favicon.ico')
+def icon():
+    return send_from_directory('website/images', 'favicon.ico')
+
+
 @app.route('/js/<string:filename>')
 def static_js(*, filename):
     return send_from_directory('website/js', filename)
