@@ -2,9 +2,11 @@ let scheduledTranscript = null;
 
 function playTranscript(transcript, index) {
     const currentTime = player.getCurrentTime();
-    let {audio, dur, ...rest} = transcript[index];
+    let {audio, text, dur, ...rest} = transcript[index];
 
-    console.log(audio);
+    const snd = new Audio("data:audio/wav;base64," + audio);
+    snd.play();
+    console.log(text);
     console.log(player.getCurrentTime(), transcript[index].start)
 
     if(index + 1 < transcript.length) {
